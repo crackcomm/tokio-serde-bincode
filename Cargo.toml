@@ -1,6 +1,9 @@
 [package]
 authors = ["Antoni Boucher <bouanto@zoho.com>"]
+description = "Utilities needed to easily implement a Tokio bincode transport using serde for bincode serialization and deserialization of frame values."
+license = "MIT"
 name = "tokio-serde-bincode"
+repository = "https://github.com/antoyo/tokio-serde-bincode"
 version = "0.1.0"
 
 [dependencies]
