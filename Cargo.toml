@@ -1,0 +1,16 @@
+[package]
+authors = ["Antoni Boucher <bouanto@zoho.com>"]
+name = "tokio-serde-bincode"
+version = "0.1.0"
+
+[dependencies]
+bincode = "^0.8.0"
+bytes = "^0.4.4"
+futures = "^0.1.14"
+serde = "^1.0.8"
+tokio-serde = "^0.1.0"
+
+[dev-dependencies]
+serde_derive = "^1.0.8"
+tokio-core = "^0.1.8"
+tokio-io = "^0.1.2"
