@@ -4,11 +4,12 @@ description = "Utilities needed to easily implement a Tokio bincode transport us
 license = "MIT"
 name = "tokio-serde-bincode"
 repository = "https://github.com/antoyo/tokio-serde-bincode"
-version = "0.1.0"
+version = "0.1.1"
 
 [dependencies]
 bincode = "^0.8.0"
 bytes = "^0.4.4"
+derive-error = "^0.0.3"
 futures = "^0.1.14"
 serde = "^1.0.8"
 tokio-serde = "^0.1.0"

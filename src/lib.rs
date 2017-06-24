@@ -1,5 +1,7 @@
 extern crate bincode;
 extern crate bytes;
+#[macro_use]
+extern crate derive_error;
 extern crate futures;
 extern crate serde;
 extern crate tokio_serde;
@@ -13,16 +15,12 @@ use futures::{Poll, Sink, StartSend, Stream};
 use serde::{Deserialize, Serialize};
 use tokio_serde::{Deserializer, FramedRead, FramedWrite, Serializer};
 
-#[derive(Debug)]
+#[derive(Debug, Error)]
 pub enum Error {
+    /// IO error.
     Io(io::Error),
+    /// Bincode error.
     Serde(bincode::Error),
-}
-
-impl From<io::Error> for Error {
-    fn from(src: io::Error) -> Self {
-        Error::Io(src)
-    }
 }
 
 struct Bincode<T> {

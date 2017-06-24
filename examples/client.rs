@@ -36,7 +36,7 @@ pub fn main() {
         let length_delimited = length_delimited::FramedWrite::new(socket);
 
         // Serialize frames with JSON
-        let serialized = WriteBincode::new(length_delimited);
+        let serialized: WriteBincode<length_delimited::FramedWrite<TcpStream>, Data> = WriteBincode::new(length_delimited);
 
         // Send the value
         serialized.send(Data { field: 42 })
